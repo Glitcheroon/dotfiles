@@ -1,5 +1,5 @@
-![My Desktop](/home/glitcheroon/dotfiles/assets/2026-04-02_12-29-32.png)
-![My Desktop](/home/glitcheroon/dotfiles/assets/2026-04-02_12-30-47.png)
+![My Desktop](assets/2026-04-02_12-29-32.png)
+![My Desktop](assets/2026-04-02_12-30-47.png)
 
 
 
