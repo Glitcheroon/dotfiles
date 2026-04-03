@@ -22,6 +22,8 @@ Keybinds:
  - Super + Space: language switch (VN / EN)
 
 
-![My Desktop](assets/2026-04-02_12-29-32.png)
-![My Desktop](assets/2026-04-02_12-30-47.png)
-
+![My Desktop](assets/2026-04-03_23-05-02.png)
+![My Desktop](assets/2026-04-03_23-05-06.png)
+![My Desktop](assets/2026-04-03_23:11:03.png)
+![My Desktop](assets/2026-04-03_23:11:18.png)
+![My Desktop](assets/2026-04-03_23:11:36.png)
