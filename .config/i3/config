@@ -11,8 +11,10 @@
 for_window [window_role="GtkFileChooserDialog"] resize set 800 600
 for_window [window_role="GtkFileChooserDialog"] move position center
 default_border pixel 2
-client.focused #ef7674 #ef7674 #ef7674 #ef7674 #ef77674 
-client.unfocused #ae89ff #ae89ff #ae89ff #ae89ff #ae89ff #ae89ff
+client.focused #ef7674 #ef7674 #ffffff #ef7674 #ef77674 
+client.unfocused #ae89ff #ae89ff #ffffff #ae89ff #ae89ff
+client.focused_inactive #ae89ff #ae89ff #ffffff #ae89ff #ae89ff
+
 gaps inner 5
 gaps outer 1
 set $mod Mod4
@@ -29,12 +31,13 @@ font pango:monospace 8
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id dbus-update-activation-environment --all
+exec_always --no-startup-id autotiling
 #exec --no-startup-id xidlehook \
 #--not-when-fullscreen \
 #--timer 600 'i3lock --nofork' '' \
 #--timer 60 '~/.local/bin/suspend-on-battery.sh' ''
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
-exec_always --no-startup-id /home/glitcheroon/.config/polybar/launch.sh
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id ~/.fehbg
 exec_always --no-startup-id ibus-daemon -drx
 exec_always --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
@@ -58,7 +61,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 #bindsym Print exec scrot ~/Pictures/Screenshots/screenshot.png
 bindsym $mod+space exec --no-startup-id ~/.config/i3/toggle-ime.sh
 bindsym $mod+F5 exec --no-startup-id ~/.config/polybar/audio-switcher.sh
-bindsym Print exec maim /home/glitcheroon/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png
+bindsym Print exec maim ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png
 bindsym $mod+F4 exec --no-startup-id ~/.config/rofi/wallpaper-switcher.sh
 bindsym XF86MonBrightnessUp   exec --no-startup-id brightnessctl set 10%+
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
