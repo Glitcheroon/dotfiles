@@ -5,13 +5,15 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-# i3 config file (v4)
-#
+for_window [class="Nautilus"] border pixel 2
+for_window [class="discord"] border pixel 2
+for_window [class="steam"] border pixel 2
+for_window [class="loupe"] border pixel 2
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 for_window [window_role="GtkFileChooserDialog"] resize set 800 600
 for_window [window_role="GtkFileChooserDialog"] move position center
 for_window [window_role="GtkFileChooserDialog"] border pixel 2
-for_window [class="Nautilus"] resize set 1200 700
+#for_window [class="Nautilus"] resize set 1200 700
 default_border pixel 2
 client.focused #77DD77 #77DD77 #ffffff #77DD77 #77DD77 
 client.unfocused #3C6F3C #4F934F #ffffff #4F934F #3C6F3C
@@ -33,6 +35,7 @@ font pango:monospace 8
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id dbus-update-activation-environment --all
+exec --no-startup-id ~/bin/idle-inhibit-video.sh
 exec_always --no-startup-id autotiling
 #exec --no-startup-id xidlehook \
 #--not-when-fullscreen \
@@ -56,8 +59,8 @@ exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 #bindsym Print exec scrot ~/Pictures/Screenshots/screenshot.png
@@ -68,7 +71,7 @@ bindsym $mod+F4 exec --no-startup-id ~/.config/rofi/wallpaper-switcher.sh
 bindsym XF86MonBrightnessUp   exec --no-startup-id brightnessctl set 10%+
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
 bindsym $mod+F1 exec --no-startup-id blueman-manager
-bindsym $mod+F12 exec --no-startup-id arandr
+#bindsym $mod+F12 exec --no-startup-id arandr
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -179,7 +182,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+#bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)

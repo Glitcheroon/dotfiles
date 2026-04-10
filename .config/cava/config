@@ -11,7 +11,7 @@ live-config = 1
 ; mode = normal
 
 # Accepts only non-negative values.
-; framerate = 60
+framerate = 60
 
 # 'autosens' will attempt to decrease sensitivity if the bars peak. 1 = on, 0 = off
 # new as of 0.6.0 autosens of low values (dynamic range)
@@ -258,9 +258,9 @@ live-config = 1
 # You can define as many as 8 different colors. They range from bottom to top of screen
  gradient = 1
 gradient_color_1 = '#77dd77'
-gradient_color_2 = '#ffffff'
-; gradient_color_3 = '#a6cc33'
-; gradient_color_4 = '#cccc33'
+gradient_color_2 = '#4dc7ac'
+gradient_color_3 = '#ffffff'
+; gradient_color_4 = '#77dd77'
 ; gradient_color_5 = '#cca633'
 ; gradient_color_6 = '#cc8033'
 ; gradient_color_7 = '#cc5933'
@@ -270,11 +270,11 @@ gradient_color_2 = '#ffffff'
 # Horizontal is only supported on noncurses output.
 # Only one color will be calculated per bar.
 horizontal_gradient = 0
-horizontal_gradient_color_1 = '#AF8CFD'
-horizontal_gradient_color_2 = '#C086DB'
-horizontal_gradient_color_3 = '#D081B9'
-horizontal_gradient_color_4 = '#E17B97'
-horizontal_gradient_color_5 = '#F17575'
+horizontal_gradient_color_1 = '#ffffff'
+horizontal_gradient_color_2 = '#77dd77'
+horizontal_gradient_color_3 = '#ffffff'
+horizontal_gradient_color_4 = '#77dd77'
+horizontal_gradient_color_5 = '#ffffff'
 ; horizontal_gradient_color_6 = '#8db7d2'
 ; horizontal_gradient_color_7 = '#5e62a9'
 ; horizontal_gradient_color_8 = '#434279'
@@ -299,7 +299,7 @@ horizontal_gradient_color_5 = '#F17575'
 ; integral = 77
 
 # Disables or enables the so-called "Monstercat smoothing" with or without "waves". Set to 0 to disable.
-; monstercat = 0
+monstercat = 0
 ; waves = 0
 
 # Set gravity percentage for "drop off". Higher values means bars will drop faster.
